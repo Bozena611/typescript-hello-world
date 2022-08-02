@@ -40,3 +40,18 @@ let employee: Employee = {
         console.log(date);
     }
 };
+
+// Union Types
+function kgToLbs(weight: number | string): number {
+    //Narrowing
+
+    if (typeof weight === 'number') {
+        return weight * 2.2
+    } else {
+        return parseInt(weight) * 2.2;
+    }
+}
+
+//both examples below will work because of Union Types we declared on line 45
+kgToLbs(10);
+kgToLbs('10kg');
