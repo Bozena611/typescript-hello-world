@@ -93,3 +93,22 @@ function greet (name: string | null | undefined) {
 
 greet(null)
 greet(undefined)
+
+// Optional Chaining
+
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0? null : { birthday: new Date()};
+}
+
+let customer = getCustomer(0);
+/* if (customer !== null && customer !== undefined) {
+    console.log(customer.birthday);
+}*/
+// instead of if statement above you can use 
+//Optional property access operator
+
+console.log(customer?.birthday);
