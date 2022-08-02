@@ -72,3 +72,10 @@ let textBox: UIWidget = {
     drag: () => {},
     resize: () => {}
 }
+
+// Literal Types (exact, specific) 
+
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Length = 'cm' | 'inch';
