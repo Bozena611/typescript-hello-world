@@ -97,18 +97,26 @@ greet(undefined)
 // Optional Chaining
 
 type Customer = {
-    birthday: Date
+    birthday?: Date
 };
 
 function getCustomer(id: number): Customer | null | undefined {
-    return id === 0? null : { birthday: new Date()};
+    return id === 0 ? null : { birthday: new Date()};
 }
 
-let customer = getCustomer(0);
+let customer = getCustomer(1);
 /* if (customer !== null && customer !== undefined) {
     console.log(customer.birthday);
 }*/
 // instead of if statement above you can use 
 //Optional property access operator
 
-console.log(customer?.birthday);
+console.log(customer?.birthday?.getFullYear());
+
+
+// Optional element access operator - useful for arrays
+//instead of this:
+// if (customers !== null && customers !== undefined)
+// customers [0]
+// use this
+//customers?.[0]
