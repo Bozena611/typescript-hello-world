@@ -26,12 +26,14 @@ function calculateTax(income: number, taxYear = 2022): number {
 calculateTax(10_000);
 
 //Objects
-let employee: {
+//type Alias
+type Employee = {
     //use readonly when you do not want to change the value
-   readonly id: number,
+    readonly id: number,
     name: string, 
     retire: (date: Date) => void
-} = {
+}
+let employee: Employee = {
     id: 1, 
     name: 'Mosh',
     retire: (date: Date)=> {
