@@ -46,4 +46,14 @@ let textBox = {
     resize: () => { }
 };
 let quantity = 100;
+function greet(name) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log('Hola');
+    }
+}
+greet(null);
+greet(undefined);
 //# sourceMappingURL=index.js.map

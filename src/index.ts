@@ -79,3 +79,17 @@ type Quantity = 50 | 100;
 let quantity: Quantity = 100;
 
 type Length = 'cm' | 'inch';
+
+// Nullable Types
+// to be able to use null or undefined you need to use types for them
+
+function greet (name: string | null | undefined) {
+    if (name) {
+    console.log (name.toUpperCase());
+    } else {
+        console.log('Hola');
+    }
+}
+
+greet(null)
+greet(undefined)
